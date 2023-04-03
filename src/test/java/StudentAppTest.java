@@ -49,8 +49,9 @@ public class StudentAppTest {
         allStudentsPage.waitAndClickOnAddStudentButton();
 
         String name = dataFaker.name().firstName();
+        String email = dataFaker.internet().emailAddress();
         addStudentPage.waitAndSetValueForNameField(name);
-        addStudentPage.waitAndSetValueForEmailField();
+        addStudentPage.waitAndSetValueForEmailField(email);
         addStudentPage.waitAndSetGender(MALE);
         addStudentPage.clickOnSubmitButton();
 
